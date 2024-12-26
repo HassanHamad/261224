@@ -1,0 +1,60 @@
+class User1
+
+    def __init__(self, name, age, gender, balance, deposit_amount, withdrawal_amount)
+        print(I am the 1st grandfather!)
+
+class User
+
+    def __init__ (self, name, age, gender, balance, deposit_amount, withdrawal_amount)
+        self.name =                                     name
+        self.age =                                      age
+        self.gender =                                   gender
+        self.balance =                                  balance
+        self.deposit_amount =                           deposit_amount
+        self.withdrawal_amount =                        withdrawal_amount
+        
+        print(I am the 2nd grandfather!)
+
+
+    def show(self, name)
+        print(The name of the user is,              self.name)
+        print(The age of the user is,               self.age)
+        print(The Gender of the user is,            self.gender)
+        print(The balance of the user is,           self.balance)
+        print(The deposit amount of the user is,    self.deposit_amount)
+        print(The withdrawal amount of the user is, self.withdrawal_amount)
+
+        
+class InternationalFinance(User)
+    def __init__(self, name, age, gender, balance, deposit_amount, withdrawal_amount) 
+        super().__init__(name, age, gender, balance, deposit_amount, withdrawal_amount)
+        print(CIB is part of the International Banking Community)
+        
+        
+class Bank(User)
+    
+    def __init__(self, name, age, gender, balance, deposit_amount, withdrawal_amount) 
+        super().__init__(name, age, gender, balance, deposit_amount, withdrawal_amount)
+        print(CIB is part of the Egyptian Banking Community)
+        
+    def deposit(self)
+        self.balance =                                 self.balance + self.deposit_amount
+        print(New Balance is = ,                     self.balance)
+
+    def withdraw (self)
+        if self.withdrawal_amount   self.balance
+            print(Withdrawal service available)
+        else
+            print(Sorry you can't withdraw)
+        
+class Dobi(User1)
+    def __init__(self,name, age, gender, balance, deposit_amount, withdrawal_amount)
+        super().__init__(name, age, gender, balance, deposit_amount, withdrawal_amount)
+        print(dobi)
+        
+class CIB(InternationalFinance, Bank, Dobi)
+    def __init__(self, name, age, gender, balance, deposit_amount, withdrawal_amount)
+        super().__init__(name, age, gender, balance, deposit_amount, withdrawal_amount)
+        print(I am a CIB Customer)
+
+obj = CIB('Ahmed', 25, Male, 2000, 50000, 30000)
